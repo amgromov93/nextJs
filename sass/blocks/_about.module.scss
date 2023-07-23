@@ -1,0 +1,18 @@
+.about {
+  &__box {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 49px;
+    & > h2 {
+      margin-top: 28px;
+      margin-bottom: 24px;
+    }
+    & > p {
+      margin-bottom: 48px;
+    }
+  }
+  &__positionLeft {
+    position: relative;
+    right: 30px;
+  }
+}

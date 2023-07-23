@@ -1,0 +1,45 @@
+.headingOne {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  &__mobile {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+  }
+}
+
+.paragraph {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  &__mobile {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.link {
+  color: var(--soft-blue, #5468E7);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration-line: underline;
+  display: flex;
+  align-items: center;
+  &::after {
+    content: '';
+    background-image: url(../img/aboutContainer/arrow_right_alt_24px.svg);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+  }
+}
