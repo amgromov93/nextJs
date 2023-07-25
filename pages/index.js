@@ -8,6 +8,7 @@ import logo from "../img/logo.png";
 import styles from "../sass/style.module.scss";
 import Form from "../components/Form";
 import About from "../components/About";
+import SliderContainer from "../components/Slider";
 
 export default function HomePage() {
   const headerContainerClasses = styles.container + ' ' + styles.header__container;
@@ -40,6 +41,7 @@ export default function HomePage() {
       </header>
       <MainLayout>
         <About />
+        <SliderContainer />
       </MainLayout>
     </>
   )

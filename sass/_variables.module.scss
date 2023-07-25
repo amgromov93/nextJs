@@ -11,6 +11,13 @@
   }
 }
 
+.headingThree {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; 
+}
+
 .paragraph {
   font-size: 18px;
   font-style: normal;
@@ -22,6 +29,14 @@
     font-weight: 400;
     line-height: 24px;
   }
+}
+
+.caption__mobile {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.14px;
 }
 
 .link {

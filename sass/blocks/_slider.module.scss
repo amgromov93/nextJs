@@ -1,0 +1,29 @@
+.slider {
+  padding-bottom: 170px;
+  &__title {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  &__slide {
+    background-color: #fff;
+    padding: 44px 33px;
+    box-shadow: 0px 16px 24px 0px rgba(118, 118, 178, 0.24);
+    &__rate {
+      margin-bottom: 24px;
+    }
+    &__box {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: min-content min-content;
+      align-items: center;
+    }
+    &__image {
+      grid-row: 1 / -1;
+    }
+    &__company {
+      color: var(--desaturated-blue, #7676B2);
+    }
+  }
+}

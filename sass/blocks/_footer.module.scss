@@ -1,0 +1,35 @@
+.footer {
+  background: var(--dark-blue, #232340);
+  margin-top: 120px;
+  padding-top: 48px;
+  &__title {
+    margin-top: 16px;
+    color: #fff;
+    width: 168px;
+  }
+  & article {
+    margin-bottom: 48px;
+  }
+  &__category {
+    color: var(--soft-blue, #5468E7);
+    margin-bottom: 16px;
+  }
+  &__link {
+    color: var(--off-white, #F5F5F5);
+  }
+  & input {
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(245, 245, 245, 0.24);
+    width: 100%;
+    padding: 11px 16px;
+  }
+  &__linksContainer {
+    display: flex;
+    flex-direction: column;
+    & > a {
+      color: #F5F5F5;
+    }
+  }
+}

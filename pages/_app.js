@@ -1,4 +1,4 @@
-// import "../sass/style.module.scss";
+import "../sass/style.module.scss";
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +13,7 @@ export default function MyApp({ Component, pageProps }) {
           font-family: 'Lexend Deca', sans-serif;
           margin: 0 auto; 
           min-width: 325px;
+          background: var(--off-white, #F5F5F5);
         }
         a {
           text-decoration: none;
