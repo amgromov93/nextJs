@@ -2,6 +2,7 @@
   background: var(--dark-blue, #232340);
   margin-top: 120px;
   padding-top: 48px;
+  padding-bottom: 1px;
   &__title {
     margin-top: 16px;
     color: #fff;
@@ -28,8 +29,12 @@
   &__linksContainer {
     display: flex;
     flex-direction: column;
-    & > a {
+    & > a, p {
       color: #F5F5F5;
     }
+  }
+  &__rights {
+    margin-top: 120px;
+    color: #F5F5F5;
   }
 }

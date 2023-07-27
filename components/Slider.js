@@ -20,28 +20,40 @@ export default function SliderContainer() {
     slidesToScroll: 1,
   };
 
-  const props = [
+  const userReview = [
     {
       id: 1,
       name: "Chealse Morgan",
       company: "CEO ot Subway",
       paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
     },
-  ]
+    {
+      id: 2,
+      name: "Ronald Richards",
+      company: "Barone LLC.",
+      paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+    },
+    {
+      id: 3,
+      name: "Chealse Ronald",
+      company: "CEO ot Subway, Barone LLC.",
+      paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+    }
+  ];
+
+  const renderReviewsList = userReview.map((item) => {
+    return (
+      <div key={item.id}>
+          <Slide props={item} />
+      </div>
+    )
+  })
 
   return (
-    <div className={styles.container}>
+    <div>
       <h1 className={titleClasses}>What people say about Team</h1>
       <Slider {...settings}>
-        <div>
-          <Slide props={props} />
-        </div>
-        <div>
-          <Slide props={props} />
-        </div>
-        <div>
-          <Slide props={props} />
-        </div>
+        {renderReviewsList}
       </Slider>
     </div>
   )

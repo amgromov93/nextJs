@@ -8,6 +8,7 @@ export default function Footer() {
   const titleClasses = styles.caption__mobile + ' ' + styles.footer__title;
   const categoryClasses = styles.headingThree__mobile + ' ' + styles.footer__category;
   const linkClasses = styles.caption__mobile + ' ' + styles.footer__link;
+  const rightsClasses = styles.footer__rights + ' ' + styles.caption__mobile;
 
   return (
     <footer className={footerClasses}>
@@ -41,9 +42,15 @@ export default function Footer() {
       </article>
       <article>
         <h3 className={categoryClasses}>Contact Us</h3>
-        <Link href={'mailto:info@teamapp.com'}>info@teamapp.com</Link>
+        <div className={styles.footer__linksContainer}>
+          <Link className={styles.caption__mobile} href={'mailto:info@teamapp.com'}>info@teamapp.com</Link>
+          <Link className={styles.caption__mobile} href={'tel:1-800-200-300'}>1-800-200-300</Link>
+          <p className={styles.caption__mobile}>1010 Sunset Blv. Palo Alto, California</p>
+        </div>
       </article>
-      <article></article>
+      <article>
+        <p className={rightsClasses}>© Copyright Team Inc.</p>
+      </article>
     </footer>
   )
 }

@@ -1,5 +1,8 @@
 .slider {
   padding-bottom: 170px;
+  &__slideBox {
+    padding: 0 30px 40px;
+  }
   &__title {
     padding-top: 70px;
     padding-bottom: 80px;

@@ -14,28 +14,28 @@ export default function About() {
   const aboutItems = [
     {
       id: 1,
-      image: <Image src={mockup} priority='true' alt="chats" width={295} />,
+      image: <Image className={styles.about__positionRight} src={mockup} priority='false' alt="chats" />,
       title: 'Chats for your distributed teams',
       paragraph: 'Team combines the immediacy of real-time chat with an email threading model. With Team, you can catch up on important conversations while ignoring irrelevant ones.',
       link: <Link className={styles.link} href={'/'}>Learn more</Link>,
     },
     {
       id: 2,
-      image: <Image className={styles.about__positionLeft} priority='true' src={mockup2} alt="chats" width={295} />,
+      image: <Image className={styles.about__positionLeft} priority='true' src={mockup2} alt="chats" />,
       title: 'Chats for your distributed teams',
       paragraph: 'Team combines the immediacy of real-time chat with an email threading model. With Team, you can catch up on important conversations while ignoring irrelevant ones.',
       link: <Link className={styles.link} href={'/'}>Learn more</Link>,
     },
     {
       id: 3,
-      image: <Image className={styles.about__positionLeft} priority='true' src={mockup3} alt="chats" width={295} />,
+      image: <Image className={styles.about__positionLeft} priority='true' src={mockup3} alt="chats" />,
       title: 'Choose how you want to work',
       paragraph: 'In Team, you’ve got all the flexibility to work when, where and how it’s best for you. You can easily chat, send audio and video clips, or hop on a huddle to talk things out live.',
       link: <Link className={styles.link} href={'/'}>Learn more</Link>,
     },
     {
       id: 4,
-      image: <Image className={styles.about__positionLeft} priority='true' src={mockup4} alt="chats" width={295} />,
+      image: <Image className={styles.about__positionLeft} priority='true' src={mockup4} alt="chats" />,
       title: 'Move faster with your Team tools',
       paragraph: 'With your other work apps connected to Team, you can work faster by switching tabs less. And with powerful tools like Workflow Builder, you can automate away routine tasks.',
       link: <Link className={styles.link} href={'/'}>Learn more</Link>,
@@ -46,15 +46,17 @@ export default function About() {
     return (
       <article key={item.id} className={styles.about__box}>
         {item.image}
-        <h2 className={styles.headingOne__mobile}>{item.title}</h2>
-        <p className={styles.paragraph__mobile}>{item.paragraph}</p>
-        {item.link}
+        <div className={aboutClasses}>
+          <h2 className={styles.headingOne__mobile}>{item.title}</h2>
+          <p className={styles.paragraph__mobile}>{item.paragraph}</p>
+          {item.link}
+        </div>
       </article>
     )
   })
 
   return (
-    <section className={aboutClasses}>
+    <section >
       {itemsToRender}
     </section>
   )
