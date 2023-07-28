@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import styles from "../sass/style.module.scss";
 
-import mockup from "../img/aboutContainer/mockup.png";
 import mockup2 from "../img/aboutContainer/mockup2.jpg";
 import mockup3 from "../img/aboutContainer/mockup3.jpg";
 import mockup4 from "../img/aboutContainer/mockup4.jpg";
@@ -14,7 +13,7 @@ export default function About() {
   const aboutItems = [
     {
       id: 1,
-      image: <Image className={styles.about__positionRight} src={mockup} priority='false' alt="chats" />,
+      image: <div className={styles.about__positionRight} />,
       title: 'Chats for your distributed teams',
       paragraph: 'Team combines the immediacy of real-time chat with an email threading model. With Team, you can catch up on important conversations while ignoring irrelevant ones.',
       link: <Link className={styles.link} href={'/'}>Learn more</Link>,
@@ -56,7 +55,7 @@ export default function About() {
   })
 
   return (
-    <section >
+    <section className={styles.about}>
       {itemsToRender}
     </section>
   )

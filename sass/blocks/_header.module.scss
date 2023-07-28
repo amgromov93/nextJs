@@ -11,17 +11,56 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   &__burger {
     background-color: transparent;
     border: none;
   }
   &__nav {
-    display: none;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: all 2s;
+    &_active {
+      top: 0;
+    }
+    & > a {
+      margin: 20px 0;
+      color: var(--dark-blue, #232340);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+    & > button {
+      position: absolute;
+      background-color: transparent;
+      border: 0;
+      top: 30px;
+      right: 30px;
+    }
+    &__logo {
+      margin-bottom: 30px;
+    }
   }
   &__title {
     h1, p {
       color: #fff;
     }
   }
+}
+
+@media screen and (min-width: 568px) {
+  
 }
