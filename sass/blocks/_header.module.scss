@@ -29,6 +29,7 @@
     height: 100vh;
     background-color: #fff;
     transition: all 2s;
+    z-index: 2;
     &_active {
       top: 0;
     }
@@ -55,9 +56,13 @@
     }
   }
   &__title {
-    h1, p {
+    & > h1, p {
       color: #fff;
     }
+    & > h1 {
+      margin-bottom: 20px;
+    }
+
   }
 }
 
