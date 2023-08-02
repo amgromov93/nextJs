@@ -67,5 +67,27 @@
 }
 
 @media screen and (min-width: 568px) {
-  
+  .header {
+    &__background {
+      background-image: url(../../img/headerBackgroundImageDesc.jpg);
+      background-position: right;
+    }
+    &__nav {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: -140vh;
+      left: 0;
+      width: 100%;
+      height: 140vh;
+      background-color: #fff;
+      transition: all 2s;
+      z-index: 2;
+      &_active {
+        top: 0;
+      }
+    }
+  }
 }

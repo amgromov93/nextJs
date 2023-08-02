@@ -47,24 +47,22 @@ export function aboutGsapAnimations(component) {
     function setBlockNumber(i, param) {
       let ctx = gsap.context(() => {
         gsap.timeline({scrollTrigger: {
-          trigger: `.about__item__${i}`,
-          start: 'top 30%'
+          trigger: `.about__box__${i}`,
+          start: 'top 70%'
         }})
         .from(param, {
           opacity: 0,
-          duration: 0.5, 
+          duration: 1, 
           x: -100, 
           ease: "power3",
         })
         .from(`.about__item__title__${i}`, {
           opacity: 0, 
-          duration: 0.5, 
           x: -100,
           ease: "power3",
         })
         .from(`.about__item__text__${i}`, {
-          opacity: 0, 
-          duration: 0.5, 
+          opacity: 0,
           y: 50,
           ease: "power3",
         })

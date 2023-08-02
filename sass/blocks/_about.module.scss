@@ -44,13 +44,27 @@
 @media screen and (min-width: 568px) {
   .about {
     & > article:nth-child(1) a {
-      margin-bottom: 100px;
+      margin-bottom: 100px;;
     }
     &__box:not(:nth-child(1)) {
       flex-direction: row;
+      & h2 {
+        margin-top: 0;
+      }
+    }
+    &__box:nth-child(1) h2 {
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 64px;
     }
     &__positionLeft {
       padding: 30px 0;
+      width: 220%;
+      height: 360px;
+    }
+    &__box:nth-child(odd):not(:nth-child(1))  {
+      flex-direction: row-reverse;
     }
   }
 }

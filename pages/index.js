@@ -1,5 +1,6 @@
 import Link from "next/link"
 import React, { useRef, useState } from "react";
+import Head from "next/head";
 import { headerGsapAnimations } from "../model/gsapAnimations";
 
 import { MainLayout } from "../components/MainLayout"
@@ -30,13 +31,17 @@ export default function HomePage() {
     
   const onLinkClick = () => {
     setBurgerToggle(false);
-  }
+  };
+
   const component = useRef(null);
 
-  headerGsapAnimations(component)
+  headerGsapAnimations(component);
   
   return (
     <>
+      <Head>
+        <title>Team | Instant collaboration for remote teams</title>
+      </Head>
       <header className={styles.header} ref={component}>
         <div className={styles.header__background}>
           <div className={headerContainerClasses}>

@@ -44,7 +44,7 @@ export default function About() {
 
   const itemsToRender = aboutItems.map(item => {
     return (
-      <article key={item.id} className={styles.about__box + ' ' + `about__item__${item.id}`}>
+      <article key={item.id} className={styles.about__box + ' ' + `about__box__${item.id}`}>
         {item.image}
         <div className={aboutClasses}>
           <h2 className={styles.headingOne__mobile + ' ' + `about__item__title__${item.id}`}>{item.title}</h2>
