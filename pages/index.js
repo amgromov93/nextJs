@@ -16,9 +16,6 @@ import Navigation from "../components/Navigation";
 
 export default function HomePage() {
   const [burgerToggle, setBurgerToggle] = useState(false);
-
-  const props = {burgerToggle, setBurgerToggle};
-
   
   const titleGsapClasses = styles.headingOne__mobile + ' ' + "header__title__gsap";
   const paragraphGsapClasses = styles.paragraph__mobile + ' ' + "header__paragraph__gsap";
@@ -35,6 +32,13 @@ export default function HomePage() {
   const component = useRef(null);
 
   headerGsapAnimations(component);
+
+  const props = { 
+    burgerToggle, 
+    setBurgerToggle, 
+    menuBurger, 
+    onLinkClick
+  };
   
   return (
     <>
@@ -43,7 +47,7 @@ export default function HomePage() {
       </Head>
       <header className={styles.header}>
         <div className={styles.header__background}>
-          <Navigation menuBurger={menuBurger} onClick={onLinkClick} props={props}/>
+          <Navigation props={props}/>
           <section ref={component} className={styles.container}>
             <article className={styles.header__title}>
               <h1 className={titleGsapClasses}>Instant collaboration for remote teams</h1>

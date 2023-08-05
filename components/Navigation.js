@@ -6,10 +6,10 @@ import logo from "../img/logo.png";
 import darkLogo from "../img/darkLogo.png";
 
 
-export default function Navigation({ menuBurger, onLinkClick, props }) {
+export default function Navigation({ props }) {
   const headerContainerClasses = styles.container + ' ' + styles.header__container;
   const activeNavClasses = styles.header__nav + ' ' + styles.header__nav_active;
-  const {burgerToggle, setBurgerToggle} = props;
+  const {burgerToggle, setBurgerToggle, menuBurger, onLinkClick,} = props;
 
   return (
     <div className={headerContainerClasses}>
