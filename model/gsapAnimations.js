@@ -41,42 +41,40 @@ export function aboutGsapAnimations(component) {
   const leftFirthImageClass = '.style_about__positionLeft_firth__LF2yU';
 
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  
+  function setBlockNumber(i, param) {
+      useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        let ctx = gsap.context(() => {
+          gsap.timeline({scrollTrigger: {
+            trigger: `.about__box__${i}`,
+            start: 'top 70%'
+          }})
+          .from(param, {
+            opacity: 0,
+            duration: 1, 
+            x: -100, 
+            ease: "power3",
+          })
+          .from(`.about__item__title__${i}`, {
+            opacity: 0, 
+            x: -100,
+            ease: "power3",
+          })
+          .from(`.about__item__text__${i}`, {
+            opacity: 0,
+            y: 50,
+            ease: "power3",
+          })
+        }, component);
 
-    function setBlockNumber(i, param) {
-      let ctx = gsap.context(() => {
-        gsap.timeline({scrollTrigger: {
-          trigger: `.about__box__${i}`,
-          start: 'top 70%'
-        }})
-        .from(param, {
-          opacity: 0,
-          duration: 1, 
-          x: -100, 
-          ease: "power3",
-        })
-        .from(`.about__item__title__${i}`, {
-          opacity: 0, 
-          x: -100,
-          ease: "power3",
-        })
-        .from(`.about__item__text__${i}`, {
-          opacity: 0,
-          y: 50,
-          ease: "power3",
-        })
-      }, component);
-
-      return ctx;
+        return () => ctx.revert();
+      }, []);
     }
 
     setBlockNumber(1, rightImageClass);
     setBlockNumber(2, leftSecondImageClass);
     setBlockNumber(3, leftThirdImageClass);
     setBlockNumber(4, leftFirthImageClass)
-    
-
-    return () => ctx.revert();
-  }, []);
-}
+  }

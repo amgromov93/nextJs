@@ -16,9 +16,15 @@ export default function SliderContainer() {
     arrows: false,
     autoplay: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 684,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
       {
         breakpoint: 568,
         settings: {
@@ -46,19 +52,37 @@ export default function SliderContainer() {
       name: "Chealse Ronald",
       company: "CEO ot Subway, Barone LLC.",
       paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
-    }
+    },
+    {
+      id: 4,
+      name: "Chealse Morgan",
+      company: "CEO ot Subway",
+      paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+    },
+    {
+      id: 5,
+      name: "Ronald Richards",
+      company: "Barone LLC.",
+      paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+    },
+    {
+      id: 6,
+      name: "Chealse Ronald",
+      company: "CEO ot Subway, Barone LLC.",
+      paragraph: "Vestibulum eu quam ec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+    },
   ];
 
   const renderReviewsList = userReview.map((item) => {
     return (
       <div key={item.id}>
-          <Slide props={item} />
+          <Slide data={item} />
       </div>
     )
   })
 
   return (
-    <div>
+    <div className={styles.slider}>
       <h1 className={titleClasses}>What people say about Team</h1>
       <Slider {...settings}>
         {renderReviewsList}

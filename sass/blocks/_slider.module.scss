@@ -1,5 +1,4 @@
 .slider {
-  padding-bottom: 170px;
   &__slideBox {
     padding: 0 30px 40px;
   }
@@ -28,5 +27,11 @@
     &__company {
       color: var(--desaturated-blue, #7676B2);
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .slider {
+    padding: 0 110px;
   }
 }

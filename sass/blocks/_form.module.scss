@@ -35,3 +35,24 @@
     }
   }
 }
+
+@media screen and (min-width: 684px) {
+  .form {
+    justify-content: flex-start;
+    & > input {
+      width: 50%;
+    }
+    & > button {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 40vw;
+    & > input {
+      width: 60%;
+    }
+  }
+}

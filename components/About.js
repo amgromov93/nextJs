@@ -60,7 +60,7 @@ export default function About() {
   aboutGsapAnimations(component);
 
   return (
-    <section className={styles.about} ref={component}>
+    <section ref={component} className={styles.about} >
       {itemsToRender}
     </section>
   )

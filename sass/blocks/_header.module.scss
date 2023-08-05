@@ -91,3 +91,64 @@
     }
   }
 }
+
+@media screen and (min-width: 684px) {
+  .header {
+    &__burger {
+      display: none;
+    }
+    &__nav {
+      flex-direction: row;
+      position: static;
+      padding: 0;
+      width: min-content;
+      height: min-content;
+      background-color: transparent;
+      transition: none;
+      & > button {
+        display: none;
+      }
+      &__logo {
+        display: none;
+      }
+      & > a {
+        margin: 0 12px;
+        color: #fff;
+        white-space: nowrap;
+        color: var(--off-white, #F5F5F5);
+        text-shadow: 0px 8px 16px rgba(35, 35, 64, 0.60);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+      & a:nth-last-child(-n+1) {
+        padding: 10px 44px;
+        border-radius: 4px;
+        background: rgba(84, 104, 231, 0.50);
+      }
+    }
+  } 
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    &__background {
+      height: 800px;
+    }
+    &__nav {
+      & > a {
+        margin: 0 30px;
+      }
+    }
+    &__title {
+      width: 40vw;
+      & > h1 {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 64px;
+      }
+    }
+  }
+}

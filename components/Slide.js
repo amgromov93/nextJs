@@ -1,6 +1,6 @@
 import styles from "../sass/style.module.scss";
 
-export default function Slide( { props } ) {
+export default function Slide( { data } ) {
   const sliderNameClasses = styles.slider__slide__name + ' ' + styles.headingThree;
   const sliderCompanyClasses = styles.slider__slide__company + ' ' + styles.caption__mobile;
 
@@ -14,7 +14,7 @@ export default function Slide( { props } ) {
           <path d="M113.425 22.9296C113.582 22.836 113.779 22.8362 113.936 22.93L119.552 26.2767L119.552 26.2767C120.217 26.6733 120.991 26.0801 120.826 25.3811L119.338 19.088C119.294 18.9055 119.357 18.7143 119.5 18.5926L124.466 14.3526L124.466 14.3524C125.026 13.8749 124.737 12.9573 123.98 12.898L123.978 12.8978L117.441 12.3511C117.257 12.3357 117.097 12.2201 117.024 12.0504L114.466 6.10375L114.465 6.10217C114.178 5.42753 113.182 5.42753 112.895 6.10217L112.894 6.10413L110.336 12.0375C110.263 12.2069 110.103 12.3224 109.919 12.3378L103.382 12.8845L103.38 12.8847L103.38 12.8847C102.623 12.944 102.334 13.8616 102.894 14.3391L102.894 14.3392L107.861 18.5792C108.003 18.701 108.066 18.8922 108.022 19.0746L106.534 25.3677L113.425 22.9296ZM113.425 22.9296L107.808 26.2629L107.808 26.2634M113.425 22.9296L107.808 26.2634M107.808 26.2634C107.143 26.6599 106.369 26.0669 106.534 25.368L107.808 26.2634Z" fill="#FFBA79" stroke="#FFBA79" strokeLinejoin="round"/>
           <path d="M145.905 22.9296C146.062 22.836 146.259 22.8362 146.416 22.93L152.032 26.2767L152.032 26.2767C152.697 26.6733 153.471 26.0801 153.306 25.3811L151.818 19.088C151.774 18.9055 151.837 18.7143 151.98 18.5926L156.946 14.3526L156.946 14.3524C157.506 13.8749 157.217 12.9573 156.46 12.898L156.458 12.8978L149.921 12.3511C149.737 12.3357 149.577 12.2201 149.504 12.0504L146.946 6.10375L146.945 6.10217C146.658 5.42753 145.662 5.42753 145.375 6.10217L145.374 6.10413L142.816 12.0375C142.743 12.2069 142.583 12.3224 142.399 12.3378L135.862 12.8845L135.86 12.8847L135.86 12.8847C135.103 12.944 134.814 13.8616 135.374 14.3391L135.374 14.3392L140.341 18.5792C140.483 18.701 140.546 18.8922 140.502 19.0746L139.014 25.3677L145.905 22.9296ZM145.905 22.9296L140.288 26.2629L140.288 26.2634M145.905 22.9296L140.288 26.2634M140.288 26.2634C139.623 26.6599 138.849 26.0669 139.014 25.368L140.288 26.2634Z" fill="#FFBA79" stroke="#FFBA79" strokeLinejoin="round"/>
         </svg>
-        <p className={styles.paragraph__mobile}>{props.paragraph}</p>
+        <p className={styles.paragraph__mobile}>{data.paragraph}</p>
         <div className={styles.slider__slide__box}>
           <svg className={styles.slider__slide__image} width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_406_3534)">
@@ -27,8 +27,8 @@ export default function Slide( { props } ) {
             </clipPath>
             </defs>
           </svg>
-          <p className={sliderNameClasses}>{props.name}</p>
-          <p className={sliderCompanyClasses}>{props.company}</p>
+          <p className={sliderNameClasses}>{data.name}</p>
+          <p className={sliderCompanyClasses}>{data.company}</p>
         </div>
       </article>
     </section>
