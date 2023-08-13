@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
         body {
           font-family: 'Lexend Deca', sans-serif;
           margin: 0 auto; 
-          min-width: 325px;
+          min-width: 320px;
           background: var(--off-white, #F5F5F5);
         }
         a {

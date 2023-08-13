@@ -18,6 +18,13 @@
   overflow: hidden;
 }
 
+.paddingNone {
+  margin: 0 -30px;
+  width: 320px;
+  height: 200px;
+  position: relative;
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     padding: 0 140px;

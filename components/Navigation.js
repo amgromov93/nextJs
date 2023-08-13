@@ -1,20 +1,37 @@
-import styles from "../sass/style.module.scss";
+import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 
-import logo from "../img/logo.png";
+import styles from "../sass/style.module.scss";
+
 import darkLogo from "../img/darkLogo.png";
 
 
-export default function Navigation({ props }) {
+export default function Navigation({ logo, burger }) {
   const headerContainerClasses = styles.container + ' ' + styles.header__container;
   const activeNavClasses = styles.header__nav + ' ' + styles.header__nav_active;
-  const {burgerToggle, setBurgerToggle, menuBurger, onLinkClick,} = props;
+
+  const [burgerToggle, setBurgerToggle] = useState(false);
+
+  const menuBurger =
+    <button onClick={() => setBurgerToggle(!burgerToggle)} className={styles.header__burger}>
+      <Image src={burger} alt="burgerMenu" width={30} height={30}/>
+    </button>
+    
+  const onLinkClick = () => {
+    setBurgerToggle(false);
+  };
 
   return (
     <div className={headerContainerClasses}>
       <Link href={'/'}>
-        <Image src={logo} alt="logo" className={styles.logo} />
+        <Image 
+          priority={true} 
+          src={logo} 
+          alt="logo" 
+          className={styles.logo}
+        />
       </Link>
       {menuBurger}
       <nav className={burgerToggle === false ? styles.header__nav : activeNavClasses}>

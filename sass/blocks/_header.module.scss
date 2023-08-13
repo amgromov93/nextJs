@@ -7,7 +7,6 @@
   }
   &__container {
     padding-top: 30px;
-    margin-bottom: 188px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,9 +59,9 @@
       color: #fff;
     }
     & > h1 {
+      margin-top: 188px;
       margin-bottom: 20px;
     }
-
   }
 }
 

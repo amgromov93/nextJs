@@ -20,7 +20,7 @@ export default function SliderContainer() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 684,
+        breakpoint: 991,
         settings: {
           slidesToShow: 2,
         }
