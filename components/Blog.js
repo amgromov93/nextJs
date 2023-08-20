@@ -34,8 +34,6 @@ export default function Blog() {
     }
   })
 
-  console.log(renderData);
-
   return (
     <section className={blogClasses}>
       <h2 className={styles.headingOne}>Blog</h2>
