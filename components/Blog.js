@@ -20,7 +20,7 @@ export default function Blog() {
           <div className={styles.blog__image}>
             {post.image}
           </div>
-          <Link href={`/post/id`} as={`/post/${post.id}`}>
+          <Link href={`/post/[id]`} as={`/post/${post.id}`}>
             <h4 className={titleClasses}>{post.title}</h4>
           </Link>
           <p className={textClasses}>{post.text}</p>
