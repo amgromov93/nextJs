@@ -5,6 +5,8 @@ export default function PostItem({ post, numOfData }) {
   const titleImageClasses = styles.paddingNone + ' ' + styles.post__titleImage;
   const textClasses = styles.paragraph + ' ' + styles.post__text;
 
+
+  console.log(window.innerWidth);
   return (
     <>
       <article className={styles.post__box} key={post[numOfData].id}>

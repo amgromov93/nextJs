@@ -97,3 +97,36 @@
     }
   }
 }
+
+@media (684px <= width) {
+  .post {
+    &__form {
+      &__input {
+        width: 85%;
+        height: 199px;
+      }
+    }
+  }
+}
+
+@media (1200px <= width) {
+  .post {
+    &__titleImage {
+      & img {
+        width: 82vw;
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media (1300px <= width) {
+  .post {
+    &__titleImage {
+      & img {
+        width: 85vw;
+        height: 500px;
+      }
+    }
+  }
+}

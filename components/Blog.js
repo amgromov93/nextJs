@@ -5,7 +5,7 @@ import { postData } from "../data/data.js";
 import { useState } from "react";
 
 export default function Blog() {
-  const [showMore, setShowMore] = useState(5);
+  const [showMore, setShowMore] = useState(6);
 
   const blogClasses = styles.container + ' ' + styles.blog;
   const titleClasses = styles.blog__text_hidden + ' ' + styles.blog__title;
@@ -38,9 +38,11 @@ export default function Blog() {
     <section className={blogClasses}>
       <h2 className={styles.headingOne}>Blog</h2>
       <p className={styles.caption__mobile}>Open-source threaded team chat that helps teams stay productive and focused.</p>
-      {renderData}
+      <section className={styles.blog__postBox}>
+        {renderData}
+      </section>
       <div className={styles.blog__buttonBlock}>
-        <button onClick={() => {setShowMore(showMore + 5)}} type="button">Show more...</button>
+        <button onClick={() => {setShowMore(showMore + 4)}} type="button">Show more...</button>
       </div>
     </section>
   )

@@ -32,7 +32,7 @@
     &_active {
       top: 0;
     }
-    & > a {
+    &__links {
       margin: 20px 0;
       color: var(--dark-blue, #232340);
       font-size: 16px;
@@ -110,7 +110,7 @@
       &__logo {
         display: none;
       }
-      & > a {
+      &__links {
         margin: 0 12px;
         color: #fff;
         white-space: nowrap;
@@ -120,6 +120,9 @@
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
+        &_blackLinks {
+          color: #232340;
+        }
       }
       & a:nth-last-child(-n+1) {
         padding: 10px 44px;
@@ -136,7 +139,7 @@
       height: 800px;
     }
     &__nav {
-      & > a {
+      &__links {
         margin: 0 30px;
       }
     }

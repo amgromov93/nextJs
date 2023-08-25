@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -9,10 +10,13 @@ import darkLogo from "../img/darkLogo.png";
 
 
 export default function Navigation({ logo, burger }) {
+  const [burgerToggle, setBurgerToggle] = useState(false);
+  const router = useRouter();
+
   const headerContainerClasses = styles.container + ' ' + styles.header__container;
   const activeNavClasses = styles.header__nav + ' ' + styles.header__nav_active;
-
-  const [burgerToggle, setBurgerToggle] = useState(false);
+  const linkClasses = router.pathname === '/' ? styles.header__nav__links : styles.header__nav__links + ' ' + styles.header__nav__links_blackLinks;
+  
 
   const menuBurger =
     <button onClick={() => setBurgerToggle(!burgerToggle)} className={styles.header__burger}>
@@ -22,6 +26,7 @@ export default function Navigation({ logo, burger }) {
   const onLinkClick = () => {
     setBurgerToggle(false);
   };
+
 
   return (
     <div className={headerContainerClasses}>
@@ -43,11 +48,11 @@ export default function Navigation({ logo, burger }) {
         <Link onClick={onLinkClick} className={styles.header__nav__links} href={'/'}>
           <Image className={styles.header__nav__logo} src={darkLogo} alt="darkLogo"/>
         </Link>
-        <Link onClick={onLinkClick} className={styles.header__nav__links} href={'/'}>Product</Link>
-        <Link onClick={onLinkClick} className={styles.header__nav__links} href={'/blog'}>Blog</Link>
-        <Link onClick={onLinkClick} className={styles.header__nav__links} href={'/'}>Support</Link>
-        <Link onClick={onLinkClick} className={styles.header__nav__links} href={'/'}>Log in</Link>
-        <Link onClick={onLinkClick} className={styles.header__nav__links} href={'/'}>Get Access</Link>
+        <Link onClick={onLinkClick} className={linkClasses} href={'/'}>Product</Link>
+        <Link onClick={onLinkClick} className={linkClasses} href={'/blog'}>Blog</Link>
+        <Link onClick={onLinkClick} className={linkClasses} href={'/'}>Support</Link>
+        <Link onClick={onLinkClick} className={linkClasses} href={'/'}>Log in</Link>
+        <Link onClick={onLinkClick} className={linkClasses} href={'/'}>Get Access</Link>
       </nav>
     </div>
   )

@@ -86,3 +86,34 @@
     }
   }
 } 
+
+@media (684px <= width) {
+  .blog {
+    &__postBox {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+    &__item {
+      margin: 24px 0;
+    }
+    &__buttonBlock {
+      margin: 120px 0;
+    }
+  }
+}
+
+@media (1200px <= width) {
+  .blog {
+    & > p {
+      margin-bottom: 80px;
+    }
+    &__postBox {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 24px;
+    }
+    &__item {
+      margin: 0;
+    }
+  }
+}
